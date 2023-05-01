@@ -1,10 +1,23 @@
-import {FC} from "react";
+import {FC, HTMLAttributes} from "react";
 import {cva} from "class-variance-authority";
 
-interface ParagraphProps {
+const paragraphVariants = cva(
+    "max-w-prose text-slate-700 dark:text-slate-300 mb-2 text center",
+    {
+        variants: {
+            size: {
+                default: "text-base sm:text-lg",
+                sm: "tex-sm, sm:text-base",
+            },
+            defaultVariants: {
+                size: "default",
+            }
+        }
+    });
+
+interface ParagraphProps extends HTMLAttributes<any>{
 }
 
-const paragraphVariants = cva("max-w-prose text-slate-700 dark:text-slate-300 mb-2 text center")
 
 const Paragraph: FC<ParagraphProps> = ({}) => {
     return (
