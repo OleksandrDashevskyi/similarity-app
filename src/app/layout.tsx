@@ -18,6 +18,7 @@ export default function RootLayout({
       <body className="min-h-screen bg-slate-50 dark:bg-slate-100 antialiased">
         <Providers>
           {children}
+          {/*to do next work with Navbar*/}
           {/*<Navbar />*/}
         </Providers>
         {/* Allow for more height on mobile devices */}
