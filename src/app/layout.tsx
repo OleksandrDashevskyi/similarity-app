@@ -1,7 +1,10 @@
+"use client";
+import React from "react";
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
 import Providers from "@/components/ui/Providers";
+import Navbar from "@ui/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,8 +21,8 @@ export default function RootLayout({
       <body className="min-h-screen bg-slate-50 dark:bg-slate-100 antialiased">
         <Providers>
           {children}
-          {/*to do next work with Navbar*/}
-          {/*<Navbar />*/}
+          {/* @ts-expect-error Server Component */}
+          <Navbar />
         </Providers>
         {/* Allow for more height on mobile devices */}
         <div className="h-40 md:hidden" />
